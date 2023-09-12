@@ -6,6 +6,7 @@
 
 # Steps
 
+    sudo apt install gnuplot
     mkdir build && cd build && cmake .. && make
     cd src/hello-numcpp && ./HelloNumCpp
 

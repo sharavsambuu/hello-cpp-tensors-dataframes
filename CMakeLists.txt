@@ -22,8 +22,16 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(DataFrame)
 
+message(STATUS "Fetching Matplot++ library...")
+FetchContent_Declare(
+    matplot
+    GIT_REPOSITORY https://github.com/alandefreitas/matplotplusplus.git
+)
+FetchContent_MakeAvailable(matplot)
+
 
 
 message(STATUS "Adding sub project folders...")
 add_subdirectory("src/hello-numcpp")
 add_subdirectory("src/hello-dataframe")
+add_subdirectory("src/hello-matplotplusplus")
