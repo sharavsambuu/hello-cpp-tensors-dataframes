@@ -15,7 +15,15 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(NumCpp)
 
+message(STATUS "Fetching DataFrame library...")
+FetchContent_Declare(
+    DataFrame
+    GIT_REPOSITORY https://github.com/hosseinmoein/DataFrame.git
+)
+FetchContent_MakeAvailable(DataFrame)
+
 
 
 message(STATUS "Adding sub project folders...")
 add_subdirectory("src/hello-numcpp")
+add_subdirectory("src/hello-dataframe")
